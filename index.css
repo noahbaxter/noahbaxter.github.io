@@ -1,0 +1,148 @@
+@import url("content/audio.css");
+@import url("content/music.css");
+@import url("content/software.css");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Andale Mono, monospace;
+    background-color: #121212;
+    color: #ffffff;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    height: 10vh;
+    font-size: 7.5vh;
+}
+
+.intro-blurb {
+    text-align: center;
+    font-size: 1.5em;
+    /* background-color: purple; */
+}
+
+.category-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    user-select: none;
+    /* background-color: purple; */
+}
+
+.category-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 30vw;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+}
+
+.category-image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain; /* This will ensure the image scales nicely */
+    margin: auto; /* This will center the image */
+}
+
+#music-image {
+    margin-left: 5%;
+}
+
+.category-label {
+    color: #ffffff;
+    font-size: 5vw;
+}
+
+#expandedContent {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+#backButton {
+    position: absolute;
+    top: calc(20px + 1rem);
+    left: 20px;
+    font-size: 36px;
+    cursor: pointer;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    /* Set color to white */
+}
+
+.content {
+    display: flex;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    height: calc(100% - 2rem);
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 1000px) {
+    .title-bar {
+        font-size: 5vh;
+        margin-bottom: 3vh;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .title-bar {
+        font-size: 4vh;
+        margin-bottom: 3vh;
+    }
+
+    .category-wrapper {
+        flex-direction: column;
+    }
+
+    .category-button {
+        width: 80%;
+        height: 80%;
+        margin-bottom: 10vw;
+    }
+
+    .category-label {
+        font-size: 10vw;
+    }
+}
+
+/* @media (max-width: 600px) {
+    .title-bar {
+        font-size: 4vh;
+    }
+} */
