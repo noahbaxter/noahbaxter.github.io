@@ -1,0 +1,43 @@
+.software-content {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    align-items: center;
+    scrollbar-width: none;
+}
+
+.bio-software {
+    font-size: 1.1rem;
+    text-align: left;
+}
+
+.bio-software a {
+    color: white;
+}
+
+.software-content .grid-wrapper {
+    min-height: 350px;
+    width: 100%;
+    /* width: 100%; */
+}
+.software-content .grid {
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-auto-rows: 300px;
+    justify-content: center;
+
+    /* background-color: purple; */
+}
+
+.software-content .grid-item {
+    /* flex-shrink: 1; */
+    
+    /* flex-direction: column-reverse; */
+    /* aspect-ratio: 1/1; */
+}
+
+/* .software-content .grid-item .item-info {
+    max-height: 300px;
+    top: 0;
+} */
