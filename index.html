@@ -1,1 +1,51 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dichotic Studios</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    
+
+    <div class="title-bar">
+        Dichotic Studios
+    </div>
+    
+    <p class="intro-blurb">
+        Noah Baxter is an audio engineer, musician and software developer based in LA.
+    </p>
+
+    <div class="category-wrapper">
+        <div class="category-button" onclick="expandContent(this, 'audio-html')" style="background-color: #ff5733;">
+            <img src="res/main/waveform-white.png" id="audio-image" class="category-image" draggable="false">
+            <span class="category-label">Audio</span>
+        </div>
+        <div class="category-button" onclick="expandContent(this, 'music-html')" style="background-color: #33f039;">
+            <img src="res/main/16th_white.png" id="music-image" class="category-image" draggable="false">
+            <span class="category-label">Music</span>
+        </div>
+        <div class="category-button" onclick="expandContent(this, 'software-html')" style="background-color: #5733ff;">
+            <img src="res/main/code_white.png" id="software-image" class="category-image" draggable="false">
+            <span class="category-label">Software</span>
+        </div>
+    </div>
+
+    <div id="expandedContent" class="hidden">
+        <div id="backButton" onclick="collapseContent()">X</div> <!-- The big X -->
+        <div class="content"></div>
+    </div>
+
+    <iframe src="content/audio.html" style="display:none" id="audio-html"></iframe>
+    <iframe src="content/music.html" style="display:none" id="music-html"></iframe>
+    <iframe src="content/software.html" style="display:none" id="software-html"></iframe>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
