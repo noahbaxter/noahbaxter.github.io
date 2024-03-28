@@ -1,9 +1,11 @@
 function expandContent(colorDiv, contentId) {
     var expandedContent = document.getElementById('expandedContent');
+    var backButton = document.getElementById('backButton');
     var color = window.getComputedStyle(colorDiv).backgroundColor; // Get the background color of the clicked color square
 
     // Set the background color of the expanded content
     expandedContent.style.backgroundColor = color;
+    backButton.style.backgroundColor = rgbToRgba(color, 0.7);
 
     // Get the content to display
     var content = document.getElementById(contentId).contentDocument.body.innerHTML;
@@ -25,4 +27,8 @@ function collapseContent() {
     expandedContent.style.display = 'none';
 
     document.getElementsByTagName('body')[0].style.overflow = 'auto'; // Allow scrolling
+}
+
+function rgbToRgba(rgb, alpha) {
+    return rgb.replace(')', `, ${alpha})`).replace('rgb', 'rgba');
 }

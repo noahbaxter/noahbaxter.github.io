@@ -29,7 +29,8 @@ body {
 .intro-blurb {
     text-align: center;
     font-size: 1.5em;
-    /* background-color: purple; */
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .category-wrapper {
@@ -39,7 +40,6 @@ body {
     align-items: center;
 
     user-select: none;
-    /* background-color: purple; */
 }
 
 .category-button {
@@ -83,9 +83,15 @@ body {
 
 #backButton {
     position: absolute;
-    top: calc(20px + 1rem);
+    text-align: center;
+    top: calc(2.5rem);
     left: 20px;
+    width: 36px;
     font-size: 36px;
+    
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+
     cursor: pointer;
     color: #fff;
     user-select: none;
@@ -95,13 +101,25 @@ body {
 
 .content {
     display: flex;
-    margin-left: 5rem;
-    margin-right: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     flex-direction: column;
     height: calc(100% - 2rem);
     text-align: center;
+}
+
+.content-header {
+    margin-left: 3rem;
+}
+
+.content-text {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
 }
 
 .hidden {
@@ -138,6 +156,15 @@ body {
 
     .category-label {
         font-size: 10vw;
+    }
+
+    .content {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    .content-header {
+        margin-left: 4rem;
     }
 }
 
