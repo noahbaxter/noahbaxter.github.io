@@ -1,0 +1,358 @@
+[
+    {
+        "artist": "Blotter Boyz",
+        "title": "Lightbox",
+        "year": 2024,
+        "month": 7,
+        "day": 12,
+        "genre": ["Indie"],
+        "role": ["Production", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/track/19g69surnc2U2NPaqY16zm",
+        "img": "../res/albums/240712-blotterboyz.jpg"
+    },
+    {
+        "artist": "Truck Violence",
+        "title": "Violence",
+        "year": 2024,
+        "month": 7,
+        "day": 5,
+        "genre": ["Folk Hardcore"],
+        "role": ["Production", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/2ECrutmVFOm7DnJuyKjtB0",
+        "img": "../res/albums/240705-truckviolence.jpg"
+    },
+    {
+        "artist": "Echo Baxter",
+        "title": "Loose Threads",
+        "year": 2024,
+        "month": 6,
+        "day": 18,
+        "genre": ["Film Score"],
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://www.youtube.com/watch?v=ZLrPvw_kZq8",
+        "img": "../res/albums/240618-echobaxter.png"
+    },
+    {
+        "artist": "Horsewreck",
+        "title": "Art Therapy",
+        "year": 2024,
+        "month": 4,
+        "day": 2,
+        "genre": ["Country Pop"],
+        "role": ["Mastering"],
+        "url": "https://open.spotify.com/album/2tnhchBbxrhcCwjNIHFJuD",
+        "img": "../res/albums/240402-horsewreck.jpg"
+    },
+    {
+        "artist": "Lockslip",
+        "title": "Lockslip",
+        "year": 2024,
+        "month": 1,
+        "day": 26,
+        "genre": ["Mathcore"],
+        "role": ["Performer", "Recording", "Mixing"],
+        "url": "https://open.spotify.com/album/7megYx0XmIKQLbz2tun7CU",
+        "img": "../res/albums/240126-lockslip.jpg"
+    },
+    {
+        "artist": "Blotter Boyz",
+        "title": "Thoughts",
+        "year": 2024,
+        "month": 1,
+        "day": 20,
+        "genre": ["Indie Rock"],
+        "role": ["Performer", "Recording", "Mixing"],
+        "url": "https://open.spotify.com/album/1f4UusqLMeQJBxAjY2FIsW",
+        "img": "../res/albums/240120-blotterboyz.jpg"
+    },
+    {
+        "artist": "Chumming",
+        "title": "First Things",
+        "year": 2024,
+        "month": 1,
+        "day": 1,
+        "role": ["Performer", "Recording"],
+        "url": "https://chumming.bandcamp.com/album/first-things",
+        "img": "../res/albums/240101-chumming.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "Hinterlands",
+        "year": 2023,
+        "month": 7,
+        "day": 24,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/6tfkPrbF02rNOwmdDV9RSG",
+        "img": "../res/albums/230724-nocru5t.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "Demo",
+        "year": 2023,
+        "month": 4,
+        "day": 30,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/1tGeHLDmKDezAKEoP8BmTR",
+        "img": "../res/albums/230430-nocru5t.jpg"
+    },
+    {
+        "artist": "Horsewreck",
+        "title": "Blight",
+        "year": 2023,
+        "month": 3,
+        "day": 25,
+        "role": ["Mastering"],
+        "url": "https://open.spotify",
+        "img": "../res/albums/230325-horsewreck.jpg"
+    },
+    {
+        "artist": "Morte France",
+        "title": "Souveraineté Radiale",
+        "year": 2023,
+        "month": 2,
+        "day": 23,
+        "role": ["Recording", "Mixing"],
+        "url": "https://open.spotify.com/album/6vh3r3KE1uABLkJaj4vnur",
+        "img": "../res/albums/230223-mortefrance.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "AB Lore",
+        "year": 2022,
+        "month": 5,
+        "day": 27,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/0weRzF7SL2jh9YBSdXIWjh",
+        "img": "../res/albums/220527-nocru5t.jpg"
+    },
+    {
+        "artist": "Morte France",
+        "title": "Sola Fide",
+        "year": 2022,
+        "month": 3,
+        "day": 31,
+        "role": ["Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/1LPUZ0zhXGCfGBgCeKVLgj",
+        "img": "../res/albums/220331-mortefrance.jpg"
+    },
+    {
+        "artist": "Cell Press, The Great Sabatini",
+        "title": "Rhino Body Lover: A Tribute to Shallow North Dakota",
+        "year": 2022,
+        "month": 1,
+        "day": 21,
+        "role": ["Recording"],
+        "url": "https://shallownorthdakota.bandcamp.com/track/the",
+        "img": "../res/albums/220121-cellpress.jpg"
+    },
+    {
+        "artist": "Horsewreck",
+        "title": "Christmas Party Pooper",
+        "year": 2021,
+        "month": 12,
+        "day": 7,
+        "role": ["Mastering"],
+        "url": "https://open.spotify.com/track/2NDIN2YRKt2O5Ni7fUufWF",
+        "img": "../res/albums/211207-horsewreck.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "Skin Pincher (No Consent)",
+        "year": 2021,
+        "month": 12,
+        "day": 4,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/25yKGGDjmrWqztb52dPAbd",
+        "img": "../res/albums/211204-nocru5t.jpg"
+    },
+    {
+        "artist": "Gorlvsh",
+        "title": "Gorlvsh x The Listener",
+        "year": 2021,
+        "month": 11,
+        "day": 27,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/gorlvsh-x-the-listener",
+        "img": "../res/albums/211127-gorlvsh.jpg"
+    },
+    {
+        "artist": "Horsewreck",
+        "title": "Is This Real?",
+        "year": 2021,
+        "month": 11,
+        "day": 11,
+        "role": ["Mastering"],
+        "url": "https://open.spotify.com/album/5HsySiRcMwjm5zDek9Z7VL",
+        "img": "../res/albums/211111-horsewreck.jpg"
+    },
+    {
+        "artist": "Gorlvsh",
+        "title": "Elon Dust",
+        "year": 2021,
+        "month": 10,
+        "day": 31,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/elon-dust",
+        "img": "../res/albums/211031-gorlvsh.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "Gut Gallop",
+        "year": 2021,
+        "month": 9,
+        "day": 21,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/375xZr3dSOPIvnerQGK6Ju",
+        "img": "../res/albums/210921-nocru5t.jpg"
+    },
+    {
+        "artist": "Gorlvsh",
+        "title": "Rodeo Kaiju",
+        "year": 2021,
+        "month": 8,
+        "day": 15,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/rodeo-kaiju",
+        "img": "../res/albums/210815-gorlvsh.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "BiTBL0CK",
+        "year": 2021,
+        "month": 8,
+        "day": 10,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/56QvCLUpLb1e3btiTFztnt",
+        "img": "../res/albums/210810-nocru5t.jpg"
+    },
+    {
+        "artist": "No Cru5t",
+        "title": "Gushing",
+        "year": 2021,
+        "month": 6,
+        "day": 8,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://open.spotify.com/album/6PB6Sh65f4AFO7b8whlTDR",
+        "img": "../res/albums/210608-nocru5t.jpg"
+    },
+    {
+        "artist": "Mermaid in China",
+        "title": "Wild and Pretty Games",
+        "year": 2021,
+        "month": 1,
+        "day": 8,
+        "role": ["Mastering"],
+        "url": "https://open.spotify.com/album/1oEisOJoUYvlX7ulHVISOP",
+        "img": "../res/albums/210108-mermaidinchina.jpg"
+    },
+    {
+        "artist": "Gorlvsh",
+        "title": "New City Vibe",
+        "year": 2020,
+        "month": 6,
+        "day": 5,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/new-city-vibe",
+        "img": "../res/albums/200605-gorlvsh.jpg"
+    },
+    {
+        "artist": "Dichotic",
+        "title": "Fall",
+        "year": 2019,
+        "month": 3,
+        "day": 7,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://dichotic.bandcamp.com/album/fall",
+        "img": "../res/albums/190307-dichotic.jpg"
+    },
+    {
+        "artist": "Zapruder",
+        "title": "Zapruder",
+        "year": 2018,
+        "month": 11,
+        "day": 23,
+        "role": ["Mastering"],
+        "url": "https://zaprudertheband.bandcamp.com/album/zapruder",
+        "img": "../res/albums/181123-zapruder.jpg"
+    },
+    {
+        "artist": "Gorlvsh, Offset",
+        "title": "Offset / Gorlvsh",
+        "year": 2017,
+        "month": 12,
+        "day": 2,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/offset-gorlvsh",
+        "img": "../res/albums/171202-gorlvsh.jpg"
+    },
+    {
+        "artist": "Skumstrike",
+        "title": "Demo",
+        "year": 2017,
+        "month": 10,
+        "day": 15,
+        "role": ["Mixing", "Mastering"],
+        "url": "https://skumstrike.bandcamp.com/album/demo-2017",
+        "img": "../res/albums/171015-skumstrike.jpg"
+    },
+    {
+        "artist": "Dichotic",
+        "title": "Mercyy",
+        "year": 2017,
+        "month": 6,
+        "day": 16,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://dichotic.bandcamp.com/album/mercyy",
+        "img": "../res/albums/170616-dichotic.jpg"
+    },
+    {
+        "artist": "Gorlvsh",
+        "title": "Gorlvsh",
+        "year": 2017,
+        "month": 3,
+        "day": 18,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://gorlvsh.bandcamp.com/album/demo",
+        "img": "../res/albums/170318-gorlvsh.jpg"
+    },
+    {
+        "artist": "Mursa",
+        "title": "Ectopic",
+        "year": 2017,
+        "month": 3,
+        "day": 17,
+        "role": ["Performer", "Mixing", "Mastering"],
+        "url": "https://mursa.bandcamp.com/album/ectopic",
+        "img": "../res/albums/170317-mursa.jpg"
+    },
+    {
+        "artist": "Mursa",
+        "title": "MRSA",
+        "year": 2014,
+        "month": 8,
+        "day": 15,
+        "role": ["Performer"],
+        "url": "https://mursa.bandcamp.com/album/mrsa",
+        "img": "../res/albums/140815-mursa.jpg"
+    },
+    {
+        "artist": "Noskee",
+        "title": "Tepid Aquadation",
+        "year": 2013,
+        "month": 8,
+        "day": 26,
+        "role": ["Performer", "Recording", "Mixing", "Mastering"],
+        "url": "https://noskee.bandcamp.com/album/tepid-aquadation",
+        "img": "../res/albums/130826-dichotic.jpg"
+    },
+    {
+        "artist": "Mursa",
+        "title": "Demo",
+        "year": 2013,
+        "month": 1,
+        "day": 2,
+        "role": ["Performer"],
+        "url": "https://mursa.bandcamp.com/album/demo",
+        "img": "../res/albums/130102-mursa.jpg"
+    }
+]
