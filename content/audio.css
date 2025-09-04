@@ -23,6 +23,23 @@
     margin: 2rem 0;
     justify-content: center;
     flex-wrap: wrap;
+    transition: all 0.3s ease;
+}
+
+.filter-controls.sticky {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff5733;
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 0 0 20px 20px;
+    z-index: 1000;
+    margin: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+    min-width: max-content;
 }
 
 .filter-btn {
@@ -79,10 +96,11 @@
     margin-bottom: 2rem;
     
     display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     justify-content: center;
     scrollbar-width: none;
+    max-width: 100%;
 }
 
 .grid::-webkit-scrollbar {
@@ -91,11 +109,22 @@
 
 .grid-item {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 10px;
     background: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+    z-index: 1;
+    justify-self: center;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .grid-item img {
@@ -143,12 +172,17 @@
 
 @media (max-width: 700px) {
     .grid {
-        grid-template-columns: repeat(auto-fill, 170px);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-
+    
     .grid-item {
-        width: 170px;
-        height: 170px;
+        max-width: 200px;
+    }
+}
+
+    .grid-item:hover {
+        transform: scale(1.03); /* Smaller scale on mobile */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 
     .audio-content .grid-item .item-info {
