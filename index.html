@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dichotic Studios</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="content/audio.css">
+    <link rel="stylesheet" href="content/music.css">
+    <link rel="stylesheet" href="content/software.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="res/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="res/favicons/favicon-32x32.png">
@@ -14,9 +17,6 @@
 </head>
 
 <body>
-
-    
-
     <div class="title-bar">
         Dichotic Studios
     </div>
@@ -25,32 +25,161 @@
         Noah Baxter is an audio engineer, musician and software developer based in LA.
     </p>
 
-    <div class="category-wrapper">
-        <div class="category-button" onclick="expandContent(this, 'audio-html')" style="background-color: #ff5733;">
-            <img src="res/main/waveform-white.png" id="audio-image" class="category-image" draggable="false">
-            <span class="category-label">Audio</span>
-        </div>
-        <div class="category-button" onclick="expandContent(this, 'music-html')" style="background-color: #33f039;">
-            <img src="res/main/16th_white.png" id="music-image" class="category-image" draggable="false">
-            <span class="category-label">Music</span>
-        </div>
-        <div class="category-button" onclick="expandContent(this, 'software-html')" style="background-color: #5733ff;">
-            <img src="res/main/code_white.png" id="software-image" class="category-image" draggable="false">
-            <span class="category-label">Software</span>
+    <!-- Main navigation -->
+    <div id="homepage" class="page-content">
+        <div class="category-wrapper">
+            <div class="category-button" onclick="pageManager.showPage('audio')" style="background-color: #ff5733;">
+                <img src="res/main/waveform-white.png" id="audio-image" class="category-image" draggable="false">
+                <span class="category-label">Audio</span>
+            </div>
+            <div class="category-button" onclick="pageManager.showPage('music')" style="background-color: #33f039;">
+                <img src="res/main/16th_white.png" id="music-image" class="category-image" draggable="false">
+                <span class="category-label">Music</span>
+            </div>
+            <div class="category-button" onclick="pageManager.showPage('software')" style="background-color: #5733ff;">
+                <img src="res/main/code_white.png" id="software-image" class="category-image" draggable="false">
+                <span class="category-label">Software</span>
+            </div>
         </div>
     </div>
 
-    <div id="expandedContent" class="hidden">
-        <div class="content"></div>
-        <div id="backButton" onclick="collapseContent()">X</div> <!-- The big X -->
+    <!-- Audio Page -->
+    <div id="audio-page" class="page-content hidden">
+        <div id="backButton" onclick="pageManager.showPage('home')">X</div>
+        
+        <div class="audio-content">
+            <div class="bio-audio">
+                <h1 class="content-header">Audio Production</h1>
+                <p>
+                    Noah Baxter is an <b>audio engineer</b> and <b>producer</b> with a plethora of releases. Ever since pirating Reason 4 back in 2009 in a futile attempt to sound like Skrillex, Noah's been obsessed with the art of sound. Starting out in the era of cheap interfaces and free plugins, he got hooked on Ableton Live and its <i>in the box</i> diy bedroom-producer ethos. In the process of finishing 2017's <i>Ectopic</i> with his sludge metal group <b>Mursa</b>, the band ran out of money and he had to spend an entire summer reconstructing the album file by file, redoing edits and fades one at a time before finally mixing and mastering the album himself. Ever since he's self produced every project he's been a part of, and now offers freelance production for others as well.
+                    <br>
+                    <br>
+                    While clearly well versed in the world of metal and hardcore, Noah has worked in a variety of other styles too incuding hip hop, jazz, indie rock, EDM, experimental, and even some classical recordings. Couple with this nearly a decade running tech at CKUT 90.3FM, a career building audio products and software, numerous live sound gigs and more, Noah is a well rounded audio professional. He currently works out of his home studio in Los Angeles and is taking on new clients. If you are interested in working with Noah, please reach out to him at <a href="mailto:noahbaxt@gmail.com">noahbaxt@gmail.com</a> with details on your project.
+                    <br>
+                    <br>
+                    Services include:
+                    <ul>
+                        <li>Recording at Dichotic Studios (vox, guitar, bass, live drums)</li>
+                        <li>Recording at a studio of your choice, or mobile anywhere within driving distance</li>
+                        <li>Producing</li>
+                        <li>Editing and mixing</li>
+                        <li>Mastering</li>
+                        <li>Audio system designs (live recording rigs, iem, Dante networks, etc.)</li>
+                        <li>MIDI and Max/MSP system designs</li>
+                    </ul>
+                </p>
+                <p>Check out my work by clicking on an album!</p>
+            </div>
+
+            <!-- Filter buttons -->
+            <div class="filter-controls">
+                <button class="filter-btn" onclick="audioPage.filterAlbums('featured', this)">Featured</button>
+                <button class="filter-btn" onclick="audioPage.filterAlbums('albums', this)">Albums</button>
+                <button class="filter-btn" onclick="audioPage.filterAlbums('eps', this)">EPs</button>
+                <button class="filter-btn" onclick="audioPage.filterAlbums('singles', this)">Singles</button>
+                <button class="filter-btn active" onclick="audioPage.filterAlbums('all', this)">All</button>
+            </div>
+
+            <!-- Album grid -->
+            <div class="grid-wrapper">
+                <div class="grid" id="album-grid">
+                    <!-- Album items will be generated here -->
+                </div>
+                <div class="grid-fade"></div>
+            </div>
+        </div>
     </div>
 
-    <iframe src="content/audio.html" style="display:none" id="audio-html"></iframe>
-    <iframe src="content/music.html" style="display:none" id="music-html"></iframe>
-    <iframe src="content/software.html" style="display:none" id="software-html"></iframe>
+    <!-- Music Page -->
+    <div id="music-page" class="page-content hidden">
+        <div id="backButton" onclick="pageManager.showPage('home')">X</div>
+        
+        <div class="music-content">
+            <div class="bio-music">
+                <h1 class="content-header">Musician</h1>
+                <p>
+                    Noah Baxter is a <b>musician</b> and music producer and has played for over 20 years, starting out on drums at the age of four and working his way through guitar, bass, keys and even some vocals.
+                    Noah has worked with a variety of artists across a multitude of genres.
+                    <br>
+                    <br>
+                    Services include:
+                    <ul>
+                        <li>Session work (at Dichotic Studios or your own)</li>
+                        <li>Live gigs</li>
+                        <li>Music Productions</li>
+                    </ul>
+                </p>
+            </div>
+            <h1><b>This section is still under construction!!</b></h1>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <!-- Software Page -->
+    <div id="software-page" class="page-content hidden">
+        <div id="backButton" onclick="pageManager.showPage('home')">X</div>
+        
+        <div class="software-content">
+            <div class="bio-software">
+                <h1 class="content-header">Software Development</h1>
+                <p>
+                    Noah Baxter is a seasoned <b>software engineer</b> and <b>product designer</b> with a strong focus on emerging audio and music technologies. After graduating from McGill University in 2018 and a brief stint working for the legendary George Massenburg, he spent a year at <b>SIMSSA</b> training AI models and building tools for optical music regonition of 14th century neume chant manuscripts. Afterwards he went on to work for the startup <b>Subpac</b>, where he developed real time audio processing and analaysis systems for optimizing music-focused haptic devices. More recently he worked on the <b>MSG Sphere</b> developing a suite of audio tools and plugins to streamline spatialized content creation for the Sphere's one of a kind 165k speaker array.
+                    <br>
+                    <br>
+                    Noah specializes in bridging the gap between musicians, audio engineers and software developers, partially because he is all of these things at once. If you are interested in working with Noah, please reach out to him at <a href="mailto:noahbaxt@gmail.com">noahbaxt@gmail.com</a> with details on your project.
+                    <br>
+                    <br>
+                    Services include:
+                    <ul>
+                        <li>Audio plugin development (VST, AU, AAX, etc.)</li>
+                        <li>Max/MSP and Max4Live devices</li>
+                        <li>DSP algorithim development</li>
+                        <li>Software application development (python, c++, c#, etc.)</li>
+                        <li>Web development (angular, react, etc.)</li>
+                        <li>Scripting and task automation (bash, python)</li>
+                        <li>Game audio integration (Wwise, FMOD)</li>
+                        <li>Product design and prototyping</li>
+                        <li>AI model training</li>
+                        <li>Audio hardware and software consulting</li>
+                    </ul>
+                </p>
+            </div>
+            
+            <div class="grid-wrapper">
+                <div class="grid">
+                    <a target="_blank" class="grid-item"
+                        href="https://docs.google.com/document/d/1lAw8d1pnEt6ZlyfEGAXiTmLOtD87tx1A9rdBn9hoBB8/edit?usp=sharing">
+                        <img src="res/software/resume.png">
+                        <div class="item-info">
+                            <span class="title">Resume</span>
+                        </div>
+                    </a>
+                    <a target="_blank" class="grid-item"
+                        href="https://www.sphereentertainmentco.com/sphere-entertainment-unveils-the-most-advanced-concert-grade-audio-system-in-the-world-sphere-immersive-sound-powered-by-holoplot/">
+                        <img src="res/software/msg-sphere.jpg">
+                        <div class="item-info">
+                            <span class="title">MSG Sphere<br>(2022-2023)</span>
+                        </div>
+                    </a>
+                    <a target="_blank" class="grid-item" href="https://subpac.com/">
+                        <img src="res/software/subpac.jpg">
+                        <div class="item-info">
+                            <span class="title">Subpac<br>(2019-2022)</span>
+                        </div>
+                    </a>
+                    <a target="_blank" class="grid-item"
+                        href="https://cantus.simssa.ca/">
+                        <img src="res/software/simssa.jpg">
+                        <div class="item-info">
+                            <span class="title">SIMSSA<br>(2018-2019)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Component System Scripts -->
+    <script src="components.js"></script>
 </body>
 
 </html>

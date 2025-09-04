@@ -17,6 +17,44 @@
     color: white;
 }
 
+.filter-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    font-weight: 500;
+    pointer-events: all;
+    position: relative;
+    z-index: 10;
+}
+
+.filter-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn.active {
+    background: white;
+    color: #202023;
+    border-color: white;
+}
+
+.filter-btn.active:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
 .grid-wrapper {
     min-height: 350px;
     width: 100%;
@@ -36,16 +74,14 @@
 }
 
 .grid {
-    height: 100%;
     width: 100%;
     margin-top: 2rem;
     margin-bottom: 2rem;
     
     display: grid;
     grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 1rem;
+    gap: 1rem;
     justify-content: center;
-    /* overflow-y: auto; */
     scrollbar-width: none;
 }
 
@@ -55,16 +91,18 @@
 
 .grid-item {
     position: relative;
+    width: 300px;
+    height: 300px;
     overflow: hidden;
-    padding-bottom: 100%;
     border-radius: 10px;
     background: transparent;
 }
 
 .grid-item img {
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .grid-item .item-info {
@@ -105,11 +143,12 @@
 
 @media (max-width: 700px) {
     .grid {
-        /* 3 columns */
-        /* grid-template-columns: repeat(auto-fill, 110px); */
-
-        /* 2 columns */
         grid-template-columns: repeat(auto-fill, 170px);
+    }
+
+    .grid-item {
+        width: 170px;
+        height: 170px;
     }
 
     .audio-content .grid-item .item-info {
@@ -118,5 +157,10 @@
 
     .grid-item .role {
         font-size: 0.7rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
     }
 }

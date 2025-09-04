@@ -22,16 +22,15 @@
         <p>Check out my work by clicking on an album!</p>
     </div>
 
-    <!----
-    <div class="sorting-options">
-        <label for="sort-by">Sort by:</label>
-        <select id="sort-by">
-            <option value="title">Title</option>
-            <option value="release-date">Release Date</option>
-            <option value="artist">Artist</option>
-        </select>
+    <!-- Filter buttons -->
+    <div class="filter-controls">
+        <button class="filter-btn active" onclick="filterAlbums('all', this)">All</button>
+        <button class="filter-btn" onclick="filterAlbums('albums', this)">Albums</button>
+        <button class="filter-btn" onclick="filterAlbums('eps', this)">EPs</button>
+        <button class="filter-btn" onclick="filterAlbums('singles', this)">Singles</button>
+        <button class="filter-btn" onclick="filterAlbums('featured', this)">Featured</button>
+        <button class="filter-btn" onclick="filterAlbums('recent', this)">Recent</button>
     </div>
-    -->
 
     <!-- productions -->
     <div class="grid-wrapper">
