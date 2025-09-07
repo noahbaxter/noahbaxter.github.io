@@ -128,13 +128,6 @@ body {
 }
 
 /* Mobile */
-@media (max-width: 1000px) {
-    .title-bar {
-        font-size: 5vh;
-        margin-bottom: 3vh;
-    }
-}
-
 @media (max-width: 700px) {
     body {
         overflow-y: auto;

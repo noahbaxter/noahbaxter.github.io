@@ -178,12 +178,6 @@
     .grid-item {
         max-width: 200px;
     }
-}
-
-    .grid-item:hover {
-        transform: scale(1.03); /* Smaller scale on mobile */
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-    }
 
     .audio-content .grid-item .item-info {
         font-size: .9rem;
@@ -196,5 +190,10 @@
     .filter-btn {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
+    }
+
+    .filter-controls {
+        flex-wrap: nowrap;
+        overflow-x: visible;
     }
 }
