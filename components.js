@@ -84,7 +84,7 @@ class AlbumGrid {
         this.filteredAlbums.forEach(album => {
             const albumItem = document.createElement('a');
             albumItem.target = '_blank';
-            albumItem.className = 'grid-item';
+            albumItem.className = 'album-grid-item';
             albumItem.href = album.url;
             albumItem.innerHTML = `
                 <img src="${album.img}" alt="${album.title}">
@@ -128,12 +128,19 @@ class AudioPage {
         
         this.stickyScrollHandler = () => {
             const scrollTop = audioContent.scrollTop;
+            const backButton = document.querySelector('#audio-page #backButton');
             
             // Check if we've scrolled past the original position
             if (scrollTop >= originalTop) {
                 filterControls.classList.add('sticky');
+                if (backButton && window.innerWidth <= 700) {
+                    backButton.style.top = 'calc(6rem)';
+                }
             } else {
                 filterControls.classList.remove('sticky');
+                if (backButton && window.innerWidth <= 700) {
+                    backButton.style.top = '';
+                }
             }
         };
         
@@ -363,184 +370,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle initial route after components are ready
     pageManager.handleRoute();
     
-    // Add CSS for the new architecture that matches the original expandedContent styling
-    const style = document.createElement('style');
-    style.textContent = `
-        .page-content {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-        
-        .page-content.hidden {
-            display: none !important;
-        }
-        
-        #homepage {
-            position: static;
-            height: calc(100vh - 10vh - 4rem); /* Account for title bar height and intro text space */
-            display: block;
-            background-color: transparent;
-        }
-        
-        #homepage .category-wrapper {
-            height: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            user-select: none;
-        }
-        
-        /* Mobile responsive behavior */
-        @media (max-width: 700px) {
-            #homepage {
-                height: auto; /* Remove fixed height on mobile */
-                min-height: calc(100vh - 10vh - 4rem); /* Minimum height but allow scrolling */
-            }
-            
-            #homepage .category-wrapper {
-                height: auto; /* Remove fixed height on mobile */
-                flex-direction: column;
-                padding: 2rem 0; /* Add some padding for spacing */
-            }
-        }
-        
-        /* Use the original backButton styling from index.css */
-        .page-content #backButton {
-            position: absolute;
-            text-align: center;
-            top: calc(2.5rem);
-            left: 20px;
-            width: 36px;
-            font-size: 36px;
-            background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 5px;
-            cursor: pointer;
-            color: #fff;
-            user-select: none;
-        }
-        
-        /* Navigation arrows */
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            color: white;
-            cursor: pointer;
-            user-select: none;
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-        
-        .nav-arrow:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.6);
-            transform: translateY(-50%) scale(1.1);
-        }
-        
-        .nav-arrow-left {
-            left: 30px;
-        }
-        
-        .nav-arrow-right {
-            right: 30px;
-        }
-        
-        /* Mobile responsive arrows */
-        @media (max-width: 700px) {
-            .nav-arrow {
-                width: 50px;
-                height: 50px;
-                font-size: 20px;
-            }
-            
-            .nav-arrow-left {
-                left: 15px;
-            }
-            
-            .nav-arrow-right {
-                right: 15px;
-            }
-            
-            /* Reduce padding on mobile */
-            .audio-content,
-            .music-content, 
-            .software-content {
-                padding-left: 70px;
-                padding-right: 70px;
-            }
-            
-            .audio-content {
-                padding-left: 1rem;
-                padding-right: 70px;
-            }
-            
-            .software-content {
-                padding-left: 70px;
-                padding-right: 1rem;
-            }
-            
-            /* Software grid - single column on mobile */
-            .software-content .grid {
-                grid-template-columns: 1fr;
-                max-width: 300px;
-                margin: 2rem auto;
-                gap: 1.5rem;
-            }
-            
-            .software-content .grid-item {
-                max-width: 300px;
-                width: 100%;
-            }
-        }
-        
-        /* Wrap content pages in a content div to match original styling */
-        .audio-content,
-        .music-content, 
-        .software-content {
-            display: flex;
-            margin-left: 1.5rem;
-            margin-right: 1.5rem;
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-            flex-direction: column;
-            height: calc(100% - 2rem);
-            text-align: center;
-            overflow-y: auto;
-            width: calc(100% - 3rem);
-            padding-left: 100px;
-            padding-right: 100px;
-        }
-        
-        /* Adjust padding for pages with different arrow configurations */
-        .audio-content {
-            padding-left: 1.5rem; /* No left arrow */
-            padding-right: 100px; /* Right arrow space */
-        }
-        
-        .software-content {
-            padding-left: 100px; /* Left arrow space */
-            padding-right: 1.5rem; /* No right arrow */
-        }
-        
-        .content-header {
-            margin-left: 3rem;
-        }
-    `;
-    document.head.appendChild(style);
 });

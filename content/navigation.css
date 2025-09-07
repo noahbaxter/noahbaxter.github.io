@@ -1,0 +1,186 @@
+/* Page Navigation Styles */
+
+/* Page content containers */
+.page-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.page-content.hidden {
+    display: none !important;
+}
+
+/* Homepage specific styles */
+#homepage {
+    position: static;
+    height: calc(100vh - 10vh - 4rem);
+    display: block;
+    background-color: transparent;
+}
+
+#homepage .category-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+
+/* Content areas */
+.audio-content,
+.music-content, 
+.software-content {
+    display: flex;
+    margin: 1.5rem;
+    flex-direction: column;
+    height: calc(100% - 3rem);
+    text-align: center;
+    overflow-y: auto;
+    width: calc(100% - 3rem);
+}
+
+.content-header {
+    margin-left: 6rem;
+}
+
+/* Back button */
+.page-content #backButton {
+    position: absolute;
+    top: calc(2.5rem);
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    user-select: none;
+    transition: all 0.3s ease;
+    z-index: 500;
+}
+
+.page-content #backButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* Navigation arrows */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow-left {
+    left: 30px;
+}
+
+.nav-arrow-right {
+    right: 30px;
+}
+
+/* Mobile responsive */
+@media (max-width: 700px) {
+    #homepage {
+        height: auto;
+        min-height: calc(100vh - 10vh - 4rem);
+    }
+    
+    #homepage .category-wrapper {
+        height: auto;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+    
+    /* Mobile arrows - smaller and closer to edge */
+    .nav-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .nav-arrow-left {
+        left: 15px;
+    }
+    
+    .nav-arrow-right {
+        right: 15px;
+    }
+    
+    /* Smaller margins on mobile */
+    .audio-content,
+    .music-content, 
+    .software-content {
+        margin: 0.5rem;
+        width: calc(100% - 1rem);
+        height: calc(100% - 1rem);
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    
+    /* Mobile back button */
+    .page-content #backButton {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        left: 15px;
+    }
+    
+    
+    /* Additional mobile adjustments for titles */
+    .content-header {
+        margin-top: 1rem;
+    }
+    
+    /* Make musician title take up 2 line heights on mobile */
+    .music-content .content-header {
+        line-height: 2.4em;
+        min-height: 2.4em;
+    }
+    
+    /* Software grid - single column on mobile */
+    .software-content .grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 2rem auto;
+        gap: 1.5rem;
+    }
+    
+    .software-content .grid-item {
+        max-width: 300px;
+        width: 100%;
+    }
+}
