@@ -1,5 +1,29 @@
 [
     {
+        "artist": "Morte France",
+        "title": "Hesperia",
+        "year": 2025,
+        "month": 12,
+        "day": 15,
+        "genre": ["Black Metal"],
+        "type": ["album", "featured"],
+        "role": ["Production", "Recording", "Mastering"],
+        "url": "https://open.spotify.com/album/0kkbAOJnzqP3liuv2fQLhS",
+        "img": "../res/albums/251215-mortefrance.jpg"
+    },
+    {
+        "artist": "Decoy Body",
+        "title": "HYPER CON$uME [Got 2 Have It]",
+        "year": 2025,
+        "month": 11,
+        "day": 28,
+        "genre": ["Electronic"],
+        "type": ["single"],
+        "role": ["Production"],
+        "url": "https://open.spotify.com/track/06VesalmvIPyHHckqYhoic?si=d731638cfc5645f1",
+        "img": "../res/albums/251128-decoybody.jpg"
+    },
+    {
         "artist": "Blotter Boyz",
         "title": "Atelophobia",
         "year": 2025,
