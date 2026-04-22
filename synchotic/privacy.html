@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchotic Privacy Policy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Synchotic Privacy Policy</h1>
+            <p class="tagline">Last updated April 21, 2026.</p>
+        </header>
+
+        <section>
+            <h2>Use of Google API User Data</h2>
+            <p>
+                Synchotic is a desktop application to sync music game charts from Google Drive. Its sole purpose is to access and manipulate user content in Google Drive from a local machine of the end user. For accessing the user content via the Google Drive API, Synchotic uses authentication mechanisms, such as OAuth, depending on the particular Google Drive API offerings. Use of these authentication mechanisms and user data is governed by the privacy policies mentioned in the Resources &amp; Further Information section and followed by the privacy policy of Synchotic.
+            </p>
+            <ul>
+                <li>Synchotic provides the end user with access to their files available in Google Drive associated by the authentication credentials via the publicly exposed API of Google Drive.</li>
+                <li>Synchotic allows storing the authentication credentials on the user machine in the local configuration file.</li>
+                <li>Synchotic does not share any user data with third parties.</li>
+            </ul>
+            <p>
+                Synchotic requests the <code>drive.readonly</code> OAuth scope. Although this scope technically permits read access to all Drive files, Synchotic only accesses the folders you configure as sync sources. These include the community drives you enable within the app, as well as any custom Google Drive folders you add yourself. Synchotic does not browse, index, or read any other files in your Google Drive.
+            </p>
+        </section>
+
+        <section>
+            <h2>User Data Collection and Storage</h2>
+            <p>
+                This section outlines how Synchotic accesses, uses, stores, and shares user data obtained from Google Drive APIs. Our use of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.
+            </p>
+            <p>
+                Synchotic is a client-side application that users run on their own computers to manage their files on Google Drive. The Synchotic project does not operate any servers that store or process your personal data. All data access and processing occurs directly on the user's machine and between the user's machine and the Google API servers.
+            </p>
+        </section>
+
+        <section>
+            <h2>Data Accessed</h2>
+            <p>When you authorize Synchotic to access your files on Google Drive, it may access the following types of data, depending on the permissions you grant:</p>
+            <ul>
+                <li><strong>Files:</strong> Synchotic accesses the metadata (filenames, sizes, modification times, etc.) and content of your files and folders on Google Drive. This is necessary for Synchotic to perform file management tasks like listing and downloading charts.</li>
+                <li><strong>Authentication Tokens:</strong> Synchotic requests OAuth 2.0 access tokens from Google. These tokens are used to authenticate your requests to the Google APIs and prove that you have granted Synchotic permission to access your data.</li>
+                <li><strong>Basic Profile Information:</strong> As part of the authentication process, Synchotic may receive your email address to identify the connected account within the Synchotic configuration.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data Usage</h2>
+            <p>Synchotic uses the user data it accesses solely to provide its core functionality, which is initiated and controlled entirely by you, the user. Specifically:</p>
+            <ul>
+                <li>The data is used to perform file transfer and management operations (such as listing and downloading charts) between your local machine and your Google Drive account as per your direct commands.</li>
+                <li>Authentication tokens are used exclusively to make authorized API calls to Google's services on your behalf.</li>
+                <li>Your email address is used locally to help you identify which Google account is configured.</li>
+            </ul>
+            <p>
+                Synchotic does not use your data for any other purpose, such as advertising, marketing, or analysis by the Synchotic project developer.
+            </p>
+        </section>
+
+        <section>
+            <h2>Data Sharing</h2>
+            <p>
+                Synchotic does not share your user data with any third parties.
+            </p>
+            <p>
+                All data transfers initiated by the user occur directly between the machine where Synchotic is running and Google's servers. The Synchotic project and its developer <strong>never</strong> have access to your authentication tokens or your file data.
+            </p>
+        </section>
+
+        <section>
+            <h2>Data Storage &amp; Protection</h2>
+            <ul>
+                <li><strong>Configuration Data:</strong> Synchotic stores its configuration, including the OAuth 2.0 tokens required to access your Google account, in a configuration file (<code>.dm-sync/token.json</code>) located on your local machine.</li>
+                <li><strong>Security:</strong> The OAuth token is stored only on your local machine, transmitted only to Google over HTTPS, and never sent to any Synchotic-operated server (there are no such servers). You are responsible for securing this configuration file on your own computer.</li>
+                <li><strong>File Data:</strong> Your file data is only held in your computer's memory (RAM) temporarily during sync operations. Synchotic does not permanently store your file content on your local disk unless you explicitly command it to do so (e.g., by running a sync to download chart archives to a local directory).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data Retention &amp; Deletion</h2>
+            <p>Synchotic gives you full control over your data.</p>
+            <ul>
+                <li><strong>Data Retention:</strong> Synchotic retains the configuration data, including authentication tokens, on your local machine for as long as you keep the configuration file. This allows you to use Synchotic without having to re-authenticate for every session.</li>
+                <li><strong>Data Deletion:</strong> You can delete your data and revoke Synchotic's access at any time through one of the following methods:
+                    <ol>
+                        <li><strong>In-app sign out:</strong> Sign out within Synchotic to delete the token file from your local machine.</li>
+                        <li><strong>Local Deletion:</strong> You can delete the <code>.dm-sync/token.json</code> file, or delete the entire <code>.dm-sync/</code> directory. This will permanently remove the authentication tokens from your machine.</li>
+                        <li><strong>Revoking Access via Google:</strong> You can revoke Synchotic's access to your Google account directly from your Google account security settings page. This will invalidate the authentication tokens, and Synchotic will no longer be able to access your data. You can manage your permissions on the <a href="https://myaccount.google.com/permissions">Google permissions page</a>.</li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>
+                Synchotic is not directed at children under the age of 13 and does not knowingly collect personal information from children.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>
+                If you have questions about this policy, open an issue on the <a href="https://github.com/noahbaxter/synchotic">Synchotic GitHub repository</a> or email <a href="mailto:noahbaxt@gmail.com">noahbaxt@gmail.com</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Resources &amp; Further Information</h2>
+            <ul>
+                <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
+                <li><a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a></li>
+                <li><a href="https://myaccount.google.com/permissions">Manage Google account permissions</a></li>
+            </ul>
+        </section>
+
+        <footer>
+            <p><a href="index.html">Back to Synchotic</a></p>
+        </footer>
+    </main>
+</body>
+</html>
