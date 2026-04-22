@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchotic</title>
+    <meta name="description" content="Desktop app that syncs Clone Hero setlists from Google Drive.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="logo.png" alt="Synchotic logo" class="logo">
+            <h1>Synchotic</h1>
+            <p class="tagline">Clone Hero chart sync from Google Drive.</p>
+        </header>
+
+        <section>
+            <p>
+                Synchotic keeps your Clone Hero songs folder in sync with shared Google Drive setlists. Pick which drives you want, hit sync, and it handles the rest: new charts get downloaded, updated charts get replaced, and anything you disabled gets cleaned out.
+            </p>
+            <img src="screenshot.png" alt="Synchotic TUI screenshot" class="screenshot">
+        </section>
+
+        <section>
+            <h2>How to use it</h2>
+            <ol>
+                <li>Grab the launcher and drop it in your Clone Hero songs folder.</li>
+                <li>Open it up, enable the community drives you want.</li>
+                <li>Optionally sign in with Google (faster downloads, uses your own API quota).</li>
+                <li>Hit sync. Charts land in a <code>Sync Charts</code> folder next to the launcher.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Google account access</h2>
+            <p>
+                Synchotic asks for <strong>read-only</strong> access to your Drive (<code>drive.readonly</code>). It only reads the shared drives you configure as sync sources. It doesn't touch your personal Drive files, and your OAuth token stays on your machine. The <a href="privacy.html">privacy policy</a> has the full breakdown.
+            </p>
+        </section>
+
+        <section class="links">
+            <a href="https://github.com/noahbaxter/synchotic" class="button">GitHub</a>
+            <a href="https://github.com/noahbaxter/synchotic/releases" class="button">Download</a>
+            <a href="privacy.html" class="button">Privacy Policy</a>
+        </section>
+
+        <footer>
+            <p>By <a href="https://noahbaxter.dev">Noah Baxter</a>.</p>
+        </footer>
+    </main>
+</body>
+</html>
